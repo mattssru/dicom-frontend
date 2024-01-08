@@ -1,5 +1,5 @@
 <template>
-  <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+  <nav style="--bs-breadcrumb-divider: &quot;>&quot;" aria-label="breadcrumb">
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="#">Home</a></li>
       <li class="breadcrumb-item active" aria-current="page">Setting</li>
@@ -10,6 +10,4 @@
   </div>
 </template>
 
-<script lang="ts" setup>
-
-</script>
+<script setup></script>

@@ -1,5 +1,5 @@
 <template>
-  <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+  <nav style="--bs-breadcrumb-divider: &quot;>&quot;" aria-label="breadcrumb">
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="#">Home</a></li>
       <li class="breadcrumb-item active" aria-current="page">Appointment</li>
@@ -15,19 +15,37 @@
         <div class="col-lg-4">
           <div class="form-group">
             <label for="" class="form-label">VN</label>
-            <input type="text" class="form-control" id="" aria-describedby="" placeholder="type your VN...">
+            <input
+              type="text"
+              class="form-control"
+              id=""
+              aria-describedby=""
+              placeholder="type your VN..."
+            />
           </div>
         </div>
         <div class="col-lg-4">
           <div class="form-group">
             <label for="" class="form-label">Name</label>
-            <input type="text" class="form-control" id="" aria-describedby="" placeholder="type your Name...">
+            <input
+              type="text"
+              class="form-control"
+              id=""
+              aria-describedby=""
+              placeholder="type your Name..."
+            />
           </div>
         </div>
         <div class="col-lg-4">
           <div class="form-group">
             <label for="" class="form-label">Type</label>
-            <input type="text" class="form-control" id="" aria-describedby="" placeholder="type your Type...">
+            <input
+              type="text"
+              class="form-control"
+              id=""
+              aria-describedby=""
+              placeholder="type your Type..."
+            />
           </div>
         </div>
       </div>
@@ -44,63 +62,86 @@
     >
       <template #item-operation="item">
         <div class="operation-wrapper">
-          <span
-            class="material-icons"
-            @click="deleteItem(item)">
-            note
-          </span>
-          <span
-            class="material-icons"
-            @click="editItem(item)">
-            edit
-          </span>
-          <span
-            class="material-icons"
-            @click="deleteItem(item)">
-            delete
-          </span>
+          <span class="material-icons" @click="deleteItem(item)"> note </span>
+          <span class="material-icons" @click="editItem(item)"> edit </span>
+          <span class="material-icons" @click="deleteItem(item)"> delete </span>
         </div>
       </template>
     </EasyDataTable>
   </div>
 </template>
 
-<script lang="ts" setup>
-import { useRouter } from 'vue-router'
-import type { Header, Item } from "vue3-easy-data-table";
+<script setup>
+import { useRouter } from "vue-router";
 
-const router = useRouter()
+const router = useRouter();
 const addForm = () => {
-  router.push('/patient/form')
-}
+  router.push("/patient/form");
+};
 
 const themeColor = "#f48225";
 
-const headers: Header[] = [
+const headers = [
   { text: "No.", value: "no" },
-  { text: "VN No.", value: "vnNo"},
-  { text: "Name", value: "name"},
-  { text: "Type", value: "type"},
-  { text: "Owner Name", value: "ownerName"},
-  { text: "Owner Phone", value: "ownerPhone"},
-  { text: "Status", value: "status"},
-  { text: "Updated Date", value: "updateDate"},
-  { text: "Updated Name", value: "updateName"},
-  { text: "Operation", value: "operation"},
+  { text: "VN No.", value: "vnNo" },
+  { text: "Name", value: "name" },
+  { text: "Type", value: "type" },
+  { text: "Owner Name", value: "ownerName" },
+  { text: "Owner Phone", value: "ownerPhone" },
+  { text: "Status", value: "status" },
+  { text: "Updated Date", value: "updateDate" },
+  { text: "Updated Name", value: "updateName" },
+  { text: "Operation", value: "operation" },
 ];
 
-const items: Item[] = [
-  { no: "1", vnNo: "VN No", name: "Test Name", type: 'type', ownerName: "Owner Test", ownerPhone: "Owner Test", status: "Status", updateDate: "8/01/2024", updateName: "8/01/2024",},
-  { no: "2", vnNo: "VN No", name: "Test Name", type: 'type', ownerName: "Owner Test", ownerPhone: "Owner Test", status: "Status", updateDate: "8/01/2024", updateName: "8/01/2024",},
-  { no: "3", vnNo: "VN No", name: "Test Name", type: 'type', ownerName: "Owner Test", ownerPhone: "Owner Test", status: "Status", updateDate: "8/01/2024", updateName: "8/01/2024",},
-  { no: "4", vnNo: "VN No", name: "Test Name", type: 'type', ownerName: "Owner Test", ownerPhone: "Owner Test", status: "Status", updateDate: "8/01/2024", updateName: "8/01/2024",},
+const items = [
+  {
+    no: "1",
+    vnNo: "VN No",
+    name: "Test Name",
+    type: "type",
+    ownerName: "Owner Test",
+    ownerPhone: "Owner Test",
+    status: "Status",
+    updateDate: "8/01/2024",
+    updateName: "8/01/2024",
+  },
+  {
+    no: "2",
+    vnNo: "VN No",
+    name: "Test Name",
+    type: "type",
+    ownerName: "Owner Test",
+    ownerPhone: "Owner Test",
+    status: "Status",
+    updateDate: "8/01/2024",
+    updateName: "8/01/2024",
+  },
+  {
+    no: "3",
+    vnNo: "VN No",
+    name: "Test Name",
+    type: "type",
+    ownerName: "Owner Test",
+    ownerPhone: "Owner Test",
+    status: "Status",
+    updateDate: "8/01/2024",
+    updateName: "8/01/2024",
+  },
+  {
+    no: "4",
+    vnNo: "VN No",
+    name: "Test Name",
+    type: "type",
+    ownerName: "Owner Test",
+    ownerPhone: "Owner Test",
+    status: "Status",
+    updateDate: "8/01/2024",
+    updateName: "8/01/2024",
+  },
 ];
 
-  const deleteItem = (val: Item) => {
+const deleteItem = (val) => {};
 
-  };
-
-  const editItem = (val: Item) => {
-    
-  };
+const editItem = (val) => {};
 </script>
