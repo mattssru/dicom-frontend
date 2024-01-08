@@ -1,8 +1,10 @@
 <template>
 	<aside :class="`${is_expanded ? 'is-expanded' : ''}`">
-		<div class="logo">
-			<img :src="logoURL" alt="Vue" class="me-2"/> 
-		</div>
+    <router-link to="/">
+      <div class="logo">
+        <img :src="logoURL" alt="Vue" class="me-2"/> 
+      </div>
+    </router-link>
 
 		<div class="menu-toggle-wrap">
 			<button class="menu-toggle" @click="toggleMenu">

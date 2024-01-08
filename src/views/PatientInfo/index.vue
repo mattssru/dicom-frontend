@@ -6,7 +6,10 @@
     </ol>
   </nav>
   <div class="cardDashboard">
-    <h2 class="topicCard">ตารางนัดหมาย</h2>
+    <div class="d-flex align-items-center justify-content-between">
+      <h2 class="topicCard">ข้อมูลผู้ใช้</h2>
+      <button type="button" class="btn btnAdd" @click="addForm">Add</button>
+    </div>
     <form action="" class="fieldSearch">
       <div class="row">
         <div class="col-lg-4">
@@ -43,7 +46,7 @@
         <div class="operation-wrapper">
           <span
             class="material-icons"
-            @click="deleteItem(item)">
+            @click="viewDicom">
             note
           </span>
           <span
@@ -63,7 +66,17 @@
 </template>
 
 <script lang="ts" setup>
+import { useRouter } from 'vue-router'
 import type { Header, Item } from "vue3-easy-data-table";
+
+const router = useRouter()
+
+const viewDicom = () => {
+  router.push('/patient/view-dicom')
+}
+const addForm = () => {
+  router.push('/patient/form')
+}
 
 const themeColor = "#f48225";
 

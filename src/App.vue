@@ -1,12 +1,4 @@
-<script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import SideBar from './components/SideBar.vue'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import './assets/main.scss'
-
-</script>
-
-<template>
+<!-- <template>
   <SideBar />
   <main>
     <div class="wrapperContent">
@@ -14,6 +6,13 @@ import './assets/main.scss'
     </div>
   </main>
 </template>
+
+<script setup>
+import { RouterView } from 'vue-router'
+import SideBar from './components/SideBar.vue'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import './assets/main.scss'
+</script>
 
 <style lang="scss">
   :root {
@@ -30,4 +29,24 @@ import './assets/main.scss'
     width: 100vw;
     max-width: 100vw;
   }
-</style>
+</style> -->
+
+<template>
+  <component :is="layout">
+    <RouterView />
+  </component>
+</template>
+
+<script setup>
+import { computed } from 'vue'
+import { useRoute } from 'vue-router'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import './assets/main.scss'
+
+const route = useRoute()
+const layout = computed(() => {
+  return route.meta.layout || 'DefaultLayout'
+})
+
+</script>
+
