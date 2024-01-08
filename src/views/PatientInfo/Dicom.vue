@@ -1,4 +1,11 @@
 <template>
+  <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><router-link to="#">Home</router-link></li>
+      <li class="breadcrumb-item"><router-link to="/patient">Patient</router-link></li>
+      <li class="breadcrumb-item active" aria-current="page">Meducal Imaging</li>
+    </ol>
+  </nav>
   <div class="cardDashboard">
     <h2 class="topicCard">Medical Imaging</h2>
     <form action="">

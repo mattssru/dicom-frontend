@@ -37,7 +37,7 @@ const router = createRouter({
       path: "/appointment",
       name: "appointment",
       meta: { layout: DefaultLayout },
-      component: () => import("../views/Appointment.vue"),
+      component: () => import("../views/Appointment/index.vue"),
     },
     {
       path: "/payment",
@@ -47,9 +47,9 @@ const router = createRouter({
     },
     {
       path: "/settings",
-      name: "setting",
+      name: "settings",
       meta: { layout: DefaultLayout },
-      component: () => import("../views/Payment/index.vue"),
+      component: () => import("../views/Settings.vue"),
     },
   ],
 });

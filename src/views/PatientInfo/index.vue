@@ -1,8 +1,8 @@
 <template>
   <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="#">Home</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Library</li>
+      <li class="breadcrumb-item"><router-link to="#">Home</router-link></li>
+      <li class="breadcrumb-item active" aria-current="page">Patient Form</li>
     </ol>
   </nav>
   <div class="cardDashboard">
@@ -51,7 +51,7 @@
           </span>
           <span
             class="material-icons"
-            @click="editItem(item)">
+            @click="addForm">
             edit
           </span>
           <span
@@ -101,10 +101,5 @@ const items: Item[] = [
 ];
 
   const deleteItem = (val: Item) => {
-
-  };
-
-  const editItem = (val: Item) => {
-    
   };
 </script>

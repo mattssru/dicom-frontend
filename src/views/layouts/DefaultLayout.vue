@@ -12,7 +12,7 @@
         </button>
         <ul class="dropdown-menu">
           <li><a class="dropdown-item" href="#">ข้อมูลส่วนตัว</a></li>
-          <li><a class="dropdown-item" href="#">Logout</a></li>
+          <li><router-link to="/" class="dropdown-item">Logout</router-link></li>
         </ul>
       </div>
     </nav>
