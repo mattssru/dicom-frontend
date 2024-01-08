@@ -106,7 +106,6 @@
         <EasyDataTable
           :headers="headersHistory"
           :items="itemsHistory"
-          :theme-color="themeColor"
           table-class-name="customize-table"
         >
           <template #item-operation="item">
